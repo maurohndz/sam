@@ -55,6 +55,15 @@ function tabMainControl() {
 
 		$(`.mt_menu_link[href$='${id}']`).addClass(ACTIVE);
 		$(id).addClass(ACTIVE);
+
+		if (!$(event.currentTarget).attr("header")) {
+			let { top } = $('#subHeader').position()
+
+			window.scroll({
+				top,
+				behavior: 'smooth'
+			})
+		}
 	})
 
 	if (!tabs.is(":visible")) {
