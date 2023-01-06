@@ -23,6 +23,23 @@ html {
 }
 
 /* Menu */
+.menu {
+	display: flex;
+	gap: 4rem;
+}
+.menu a {
+	display: inline-block;
+	text-transform: uppercase;
+	font-family: "Lato", sans-serif;
+	font-style: italic;
+	font-weight: 900;
+	font-size: 1.2rem;
+	line-height: 2rem;
+	color: #fff;
+	text-decoration: none;
+	border-bottom: 1px solid;
+    line-height: 90%;
+}
 
 /* title section */
 .title_section {
@@ -108,14 +125,17 @@ html {
 }
 .subHeader_wrapper .menu a {
 	color: var(--blue-primary);
+    border-color: transparent;
+}
+.subHeader_wrapper .menu a.mt_active {
+    border-color: var(--blue-primary);
 }
 
-
 /* ======================= */
 /* ======================= */
 /* ======================= */
-/* history */
-#history {
+/* main_tabs */
+#main_tabs {
     background-image: url("../assets/peak.png");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -125,12 +145,26 @@ html {
 .history_content {
     height: 100vh;
     min-height: 700px;
-    width: 100%;
     padding-top: 30px;
 }
 .history_text {
 	max-width: 849px;
 	margin: 0 auto;
+}
+.mt_content .mt_item {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+}
+.mt_content.mt_active .mt_item {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+    -webkit-transition: opacity 0.3s ease-in-out;
+	-moz-transition: opacity 0.3s ease-in-out;
+	-o-transition: opacity 0.3s ease-in-out;
+	-ms-transition: opacity 0.3s ease-in-out;
+	transition: opacity 0.3s ease-in-out;
 }
 
 .slider {
@@ -292,13 +326,69 @@ footer {
 	/* ======================= */
     /* ======================= */
     /* ======================= */
-    /* history */
+    /* main_tabs */
 	.history_text {
 		padding-left: 7%;
 	}
 }
 
 @media screen and (max-width: 800px) {
+    /* ======================= */
+    /* ======================= */
+    /* ======================= */
+    /* subHeader */
+    .subHeader_image {
+        width: 100%;
+        text-align: center;
+        opacity: .7;
+    }
+
+
+    /* ======================= */
+    /* ======================= */
+    /* ======================= */
+    /* main_tabs */
+    .history_content {
+        padding-top: 0;
+        height: fit-content;
+        min-height: fit-content;
+        width: 100%;
+    }
+
+    .mt_menu {
+        display: none;
+    }
+
+    .mt_content {
+        min-height: 2rem;
+    }
+    .mt_content::before {
+        content: attr(data-title);
+        text-transform: uppercase;
+        cursor: pointer;
+        font-weight: bold;
+        background: var(--grey-primary);
+        color: var(--blue-primary);
+        padding: 0.5em;
+        display: block;
+        font-size: 2rem;
+        line-height: 90%;
+        font-weight: 700;
+        font-family: "Oswald", sans-serif;
+        padding: 8px 2.5%;
+    }
+    .mt_content.mt_active::before {
+        background: var(--blue-primary);
+        color: var(--grey-primary);
+    }
+    .mt_content.mt_active .mt_item {
+        margin-bottom: 300px;
+    }
+    .mt_item {
+        max-width: 95%;
+        margin: 0 auto;
+    }
+
     /* ======================= */
     /* ======================= */
     /* ======================= */
@@ -380,8 +470,8 @@ footer {
     /* ======================= */
     /* ======================= */
     /* ======================= */
-    /* history */
-    #history {
+    /* main_tabs */
+    #main_tabs {
         background-position: right;
     }
 }

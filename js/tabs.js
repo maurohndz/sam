@@ -1,14 +1,16 @@
-tabControl();
+tabMountainControl();
+tabMainControl()
 
 var resizeTimer;
 $(window).on("resize", function (e) {
 	clearTimeout(resizeTimer);
 	resizeTimer = setTimeout(function () {
-		tabControl();
+		tabMountainControl();
+		tabMainControl()
 	}, 1);
 });
 
-function tabControl() {
+function tabMountainControl() {
     const ACTIVE = "tabs_active";
 	let tabs = $(".tabbed_content").find(".tabs_menu");
 
@@ -48,5 +50,37 @@ function tabControl() {
 				.find('.tabs a[href$="#' + currId + '"]')
 				.addClass(ACTIVE);
 		});
+	}
+}
+
+
+function tabMainControl() {
+	const ACTIVE = "mt_active";
+	let tabs = $(".mt_menu");
+	console.log(tabs.is(":visible"))
+
+	if (tabs.is(":visible")) {
+		let active_id = $(`.mt_content.${ACTIVE}`).get(0).id;
+		let link_active = $(`.mt_menu_link[href$='${active_id}']`).get(0);
+
+		$(".mt_menu_link").removeClass(ACTIVE)
+        $(link_active).addClass(ACTIVE)
+
+		tabs.find("a").on("click", function (event) {
+			event.preventDefault();
+
+			let target = $(this).attr("href")
+
+			$(".mt_menu_link").removeClass(ACTIVE)
+			$(".mt_content").removeClass(ACTIVE)
+
+			$(this).addClass(ACTIVE);
+			$(target).addClass(ACTIVE);
+		})
+	} else {
+		$(".mt_content").on("click", ({ currentTarget }) => {
+			$(".mt_content").removeClass(ACTIVE)
+			$(currentTarget).addClass(ACTIVE);
+		})
 	}
 }
