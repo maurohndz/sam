@@ -1,0 +1,396 @@
+:root {
+    --grey-primary: #b0b4be;
+
+    --blue-primary: #414f6b;
+    --blue-secondary: #63769d;
+}
+
+html {
+	font-size: 10px;
+}
+
+/* ======================= */
+/* ======================= */
+/* ======================= */
+/* Global */
+.main_wrapper {
+	width: 95%;
+	max-width: 1000px;
+	display: flex;
+	flex-flow: column;
+	margin: auto;
+	position: relative;
+}
+
+/* Menu */
+
+/* title section */
+.title_section {
+	display: flex;
+	align-items: baseline;
+}
+.title_num {
+	font-family: "Oswald", sans-serif;
+	color: var(--blue-primary);
+	opacity: 0.5;
+	font-weight: 700;
+	font-size: 13.6rem;
+	line-height: 100%;
+}
+.title_text {
+	text-transform: uppercase;
+	font-size: 3.2rem;
+	font-weight: 700;
+	font-family: "Oswald", sans-serif;
+	color: var(--blue-primary);
+	margin-top: auto;
+	padding-bottom: 27px;
+	position: relative;
+}
+.title_text::after {
+	content: "";
+	position: absolute;
+	bottom: 6px;
+	left: 2px;
+	width: 24px;
+	height: 24px;
+	background-color: var(--blue-primary);
+	opacity: 0.5;
+}
+
+/* *** Text *** */
+.text {
+	font-family: "Lato", sans-serif;
+	font-size: 1.6rem;
+	font-weight: 300;
+	line-height: 2.4rem;
+	color: #000000;
+}
+
+/* ======================= */
+/* ======================= */
+/* ======================= */
+/* Header */
+.header {
+	flex-flow: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 0;
+}
+
+/* ======================= */
+/* ======================= */
+/* ======================= */
+/* Hero */
+#hero {
+	width: 100%;
+	height: 100vh;
+	background-image: url("../assets/hero.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+
+/* ======================= */
+/* ======================= */
+/* ======================= */
+/* subHeader */
+#subHeader {
+	width: 100%;
+	background-color: #ffffff;
+	padding: 15px 0 13px;
+}
+.subHeader_wrapper {
+	flex-flow: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.subHeader_wrapper .menu a {
+	color: var(--blue-primary);
+}
+
+
+/* ======================= */
+/* ======================= */
+/* ======================= */
+/* history */
+#history {
+    background-image: url("../assets/peak.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
+}
+
+.history_content {
+    height: 100vh;
+    min-height: 700px;
+    width: 100%;
+    padding-top: 30px;
+}
+.history_text {
+	max-width: 849px;
+	margin: 0 auto;
+}
+
+.slider {
+    background-color: rgba(66, 80, 108, 0.8);
+    padding: 30px 0 40px;
+}
+.splide__slide {
+    text-align: center;
+}
+.splide__slide img {
+    width: 85%;
+}
+.splide__pagination {
+    bottom: -2.5em;
+}
+
+/* ======================= */
+/* ======================= */
+/* ======================= */
+/* climb */
+#climb {
+    background-color: #ffffff;
+}
+#climb .main_wrapper {
+    flex-flow: row;
+    align-items: center;
+    gap: 30px;
+    max-width: 900px;
+	padding: 20px 0 30px;
+}
+
+
+/* ======================= */
+/* ======================= */
+/* ======================= */
+/* Mountains */
+#mountains {
+    background-image: url("../assets/schedule.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center 75%;
+    overflow: hidden;
+}
+.mountains_schedule {
+    flex-flow: column;
+	max-width: fit-content;
+	background-color: rgba(255, 255, 255, 0.7);
+	padding: 35px 15px 35px 35px;
+	margin: 60px 0 60px 70px;
+}
+.mountains_schedule_title {
+    font-size: 3.2rem;
+	line-height: 100%;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-family: "Oswald", sans-serif;
+	color: var(--blue-primary);
+	margin-bottom: 20px;
+}
+.mountains_schedule_table {
+    width: 100%;
+}
+.mountains_schedule_table td {
+	font-size: 1.2rem;
+	font-family: "Lato", sans-serif;
+	font-weight: 300;
+	line-height: 100%;
+	height: 1.3em;
+	width: 10em;
+}
+
+.tabs_menu {
+    display: flex;
+    background-color: var(--blue-primary);
+}
+.tabs_menu ul {
+    flex-flow: row;
+	gap: 30px;
+}
+.tabs_menu li {
+    display: inline-block;
+}
+.tabs_menu_link {
+    display: inline-block;
+    background-color: var(--blue-primary);
+	color: var(--grey-primary);
+	font-size: 2rem;
+	line-height: 90%;
+	font-weight: 700;
+	padding: 8px 15px;
+	font-family: "Oswald", sans-serif;
+	cursor: pointer;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.tabs_menu_link::before {
+    display: none;
+}
+.tabs_menu_link.tabs_active {
+    background-color: var(--grey-primary);
+    color: var(--blue-primary);
+	position: relative;
+}
+.tabs_menu_link.tabs_active::after {
+    content: '';
+    width: calc(100% - 30px);
+    height: 1px;
+    background-color: var(--blue-primary);
+    position: absolute;
+    left: 15px;
+    top: 28px;
+}
+
+.tabs_item {
+    min-height: 0;
+}
+.tabs_item_content {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+}
+.tabs_item.tabs_active .tabs_item_content {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+    -webkit-transition: opacity 0.3s ease-in-out;
+	-moz-transition: opacity 0.3s ease-in-out;
+	-o-transition: opacity 0.3s ease-in-out;
+	-ms-transition: opacity 0.3s ease-in-out;
+	transition: opacity 0.3s ease-in-out;
+}
+
+
+/* ======================= */
+/* ======================= */
+/* ======================= */
+/* Footer */
+footer {
+	width: 100%;
+	background-color: var(--blue-primary);
+	padding: 15px;
+}
+.footer_wrapper {
+	flex-flow: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.footer_wrapper span {
+	font-size: 1.2rem;
+	line-height: 2rem;
+	display: inline-block;
+	color: var(--blue-secondary);
+	font-family: "Lato", sans-serif;
+	font-style: italic;
+	font-weight: 900;
+}
+
+@media screen and (max-width: 950px) {
+	/* ======================= */
+    /* ======================= */
+    /* ======================= */
+    /* history */
+	.history_text {
+		padding-left: 7%;
+	}
+}
+
+@media screen and (max-width: 800px) {
+    /* ======================= */
+    /* ======================= */
+    /* ======================= */
+    /* Mountains */
+    .tabs_menu {
+        display: none;
+    }
+
+    .tabs_item {
+        min-height: 2rem;
+    }
+    .tabs_item::before {
+        content: attr(data-title);
+        text-transform: uppercase;
+        cursor: pointer;
+        font-weight: bold;
+        background: var(--grey-primary);
+        color: var(--blue-primary);
+        padding: 0.5em;
+        display: block;
+        font-size: 2rem;
+        line-height: 90%;
+        font-weight: 700;
+        font-family: "Oswald", sans-serif;
+        padding: 8px 2.5%;
+    }
+    .tabs_item.tabs_active::before {
+        background: var(--blue-primary);
+        color: var(--grey-primary);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* ======================= */
+    /* ======================= */
+    /* ======================= */
+    /* climb */
+    #climb .main_wrapper {
+        flex-flow: column;
+		align-items: flex-start;
+		gap: 5px;
+    }
+    .climb_text {
+        padding-left: 10%;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    /* ======================= */
+    /* ======================= */
+    /* ======================= */
+    /* Hero */
+    #hero {
+        background-size: 200% 100%;
+        background-position: 38%;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    /* ======================= */
+    /* ======================= */
+    /* ======================= */
+    /* Mountains */
+    .mountains_schedule {
+        margin: 30px 0 30px 35px;
+    }
+
+
+    /* ======================= */
+    /* ======================= */
+    /* ======================= */
+    /* Footer */
+    .footer_image img {
+		width: 120px;
+	}
+}
+
+@media screen and (max-width: 425px) {
+    /* ======================= */
+    /* ======================= */
+    /* ======================= */
+    /* Mountains */
+    .mountains_schedule {
+        margin: 30px auto;
+    }
+
+    /* ======================= */
+    /* ======================= */
+    /* ======================= */
+    /* Footer */
+    .footer_wrapper {
+		flex-flow: column;
+		gap: 5px;
+	}
+}

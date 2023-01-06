@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<!-- Reset CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css"
+		/>
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Splide - library for the slider -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/combine/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css,npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+		/>
+		<!-- Styles -->
+		<link rel="stylesheet" href="./css/styles.css" />
+	</head>
+	<body>
+		<section id="hero">
+			<header class="main_wrapper header">
+				<div class=""><img src="./assets/logo.png" alt="logo" /></div>
+
+				<ul class="menu">
+					<li class=""><a href="#history">01. history</a></li>
+					<li class=""><a href="#team">02. team</a></li>
+				</ul>
+			</header>
+		</section>
+
+        <section id="subHeader">
+			<div class="main_wrapper subHeader_wrapper">
+				<div class="subHeader_image">
+					<img src="./assets/logo-sticky.png" alt="logo-sticky" />
+				</div>
+
+				<ul class="menu">
+					<li class=""><a href="#history">01. history</a></li>
+					<li class=""><a href="#team">02. team</a></li>
+				</ul>
+			</div>
+		</section>
+
+		<section id="history">
+			<div class="main_wrapper history_content">
+                <div class="title_section">
+					<span class="title_num">01</span>
+					<h2 class="title_text">history</h2>
+				</div>
+
+				<div class="history_text">
+					<p class="text">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Proin in ante viverra, rutrum erat rutrum, consectetur
+						mi. Proin at maximus est. Nullam purus ex, iaculis sed
+						erat sed, blandit tincidunt quam. Cras scelerisque id
+						quam sed dignissim Pellentesque urna nunc, gravida quis
+						hendrerit ac, tristique ut quam. Vivamus suscipit
+						dignissim tortor nec congue.
+					</p>
+				</div>
+            </div>
+			<div class="slider">
+				<div class="main_wrapper splide">
+					<div class="splide__track">
+						<ul class="splide__list">
+							<li class="splide__slide">
+								<img src="./assets/slide-1.png" />
+							</li>
+							<li class="splide__slide">
+								<img src="./assets/slide-2.png" />
+							</li>
+							<li class="splide__slide">
+								<img src="./assets/slide-1.png" />
+							</li>
+							<li class="splide__slide">
+								<img src="./assets/slide-2.png" />
+							</li>
+							<li class="splide__slide">
+								<img src="./assets/slide-1.png" />
+							</li>
+							<li class="splide__slide">
+								<img src="./assets/slide-2.png" />
+							</li>
+							<li class="splide__slide">
+								<img src="./assets/slide-1.png" />
+							</li>
+							<li class="splide__slide">
+								<img src="./assets/slide-2.png" />
+							</li>
+							<li class="splide__slide">
+								<img src="./assets/slide-1.png" />
+							</li>
+							<li class="splide__slide">
+								<img src="./assets/slide-2.png" />
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="climb">
+			<div class="main_wrapper">
+				<div class="title_section">
+					<span class="title_num">02</span>
+					<h2 class="title_text">climb</h2>
+				</div>
+
+				<div class="climb_text">
+					<p class="text">
+						Cras scelerisque id quam sed dignissim Pellentesque urna
+						nunc, gravida quis hendrerit ac, tristique ut quam.
+						Vivamus suscipit dignissim tortor nec congue.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="mountains" class="tabbed_content">
+			<nav class="tabs_menu">
+				<ul class="main_wrapper">
+					<li>
+						<a href="#mountain1" class="tabs_menu_link tabs_active"
+							>mountain 1</a
+						>
+					</li>
+					<li>
+						<a href="#mountain2" class="tabs_menu_link"
+							>mountain 2</a
+						>
+					</li>
+				</ul>
+			</nav>
+
+			<div
+				id="mountain1"
+				class="tabs_item tabs_active"
+				data-title="mountain 1"
+			>
+				<div class="main_wrapper tabs_item_content">
+					<div class="mountains_schedule">
+						<h3 class="mountains_schedule_title">schedule</h3>
+
+						<table class="mountains_schedule_table">
+							<tr>
+								<td>25 Nov 2016</td>
+								<td>Vestibulum viverra</td>
+							</tr>
+							<tr>
+								<td>28 Nov 2016</td>
+								<td>Vestibulum viverra</td>
+							</tr>
+							<tr>
+								<td></td>
+							</tr>
+							<tr>
+								<td>18 Dec 2016</td>
+								<td>Vestibulum viverra</td>
+							</tr>
+							<tr>
+								<td></td>
+							</tr>
+							<tr>
+								<td>7 Jan 2017</td>
+								<td>Vestibulum viverra</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div id="mountain2" class="tabs_item" data-title="mountain 2">
+				<div class="main_wrapper tabs_item_content">
+					<div class="mountains_schedule">
+						<h3 class="mountains_schedule_title">schedule 2</h3>
+
+						<table class="mountains_schedule_table">
+							<tr>
+								<td>25 Nov 2016</td>
+								<td>Vestibulum viverra</td>
+							</tr>
+							<tr>
+								<td>28 Nov 2016</td>
+								<td>Vestibulum viverra</td>
+							</tr>
+							<tr>
+								<td></td>
+							</tr>
+							<tr>
+								<td>18 Dec 2016</td>
+								<td>Vestibulum viverra</td>
+							</tr>
+							<tr>
+								<td></td>
+							</tr>
+							<tr>
+								<td>7 Jan 2017</td>
+								<td>Vestibulum viverra</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<div class="main_wrapper footer_wrapper">
+				<div class="footer_image">
+					<img src="./assets/logo-footer.png" alt="logo footer" />
+				</div>
+
+				<span>COPYRIGHT 2016. ALL RIGHTS RESERVED.</span>
+			</div>
+		</footer>
+
+		<!-- libraries -->
+		<script
+			src="https://code.jquery.com/jquery-3.6.3.min.js"
+			integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+			crossorigin="anonymous"
+		></script>
+		<!-- splidejs - library for the slider -->
+		<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+		<!-- tab control -->
+		<script src="./js/tabs.js"></script>
+        <!-- slider control -->
+        <script src="./js/slider.js"></script>
+	</body>
+</html>
