@@ -57,11 +57,10 @@ function tabMountainControl() {
 function tabMainControl() {
 	const ACTIVE = "mt_active";
 	let tabs = $(".mt_menu");
-	console.log(tabs.is(":visible"))
 
 	if (tabs.is(":visible")) {
 		let active_id = $(`.mt_content.${ACTIVE}`).get(0).id;
-		let link_active = $(`.mt_menu_link[href$='${active_id}']`).get(0);
+		let link_active = $(`.mt_menu_link[href$='${active_id}']`);
 
 		$(".mt_menu_link").removeClass(ACTIVE)
         $(link_active).addClass(ACTIVE)
@@ -74,13 +73,32 @@ function tabMainControl() {
 			$(".mt_menu_link").removeClass(ACTIVE)
 			$(".mt_content").removeClass(ACTIVE)
 
-			$(this).addClass(ACTIVE);
+			$(`.mt_menu_link[href$='${target}']`).addClass(ACTIVE);
 			$(target).addClass(ACTIVE);
 		})
 	} else {
-		$(".mt_content").on("click", ({ currentTarget }) => {
+		$(".mt_menu_link").on("click", (event) => {
+			event.preventDefault();
+
 			$(".mt_content").removeClass(ACTIVE)
+			$(".mt_menu_link").removeClass(ACTIVE)
+
+			let target = event.currentTarget
+			let content_id = $(target).attr("href")
+
+			$(target).addClass(ACTIVE);
+			$(content_id).addClass(ACTIVE);
+		})
+
+		$(".mt_content").on("click", ({ currentTarget }) => {
+			let id = currentTarget.id;
+			let links = $(`.mt_menu_link[href$='${id}']`);
+
+			$(".mt_content").removeClass(ACTIVE)
+			$(".mt_menu_link").removeClass(ACTIVE)
+
 			$(currentTarget).addClass(ACTIVE);
+			$(links).addClass(ACTIVE);
 		})
 	}
 }

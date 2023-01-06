@@ -35,10 +35,14 @@ html {
 	font-weight: 900;
 	font-size: 1.2rem;
 	line-height: 2rem;
-	color: #fff;
+	color: #ffffff;
 	text-decoration: none;
 	border-bottom: 1px solid;
+    border-color: transparent;
     line-height: 90%;
+}
+.menu a.mt_active {
+    border-color: #ffffff;
 }
 
 /* title section */
@@ -444,6 +448,10 @@ footer {
     #hero {
         background-size: 160% 100%;
         background-position: 41%;
+    }
+
+    .menu {
+        gap: 2rem;
     }
 }
 
