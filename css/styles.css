@@ -352,8 +352,8 @@ footer {
     /* ======================= */
     /* Hero */
     #hero {
-        background-size: 200% 100%;
-        background-position: 38%;
+        background-size: 240% 100%;
+        background-position: 41%;
     }
 }
 
@@ -376,6 +376,16 @@ footer {
 	}
 }
 
+@media screen and (max-width: 512px) {
+    /* ======================= */
+    /* ======================= */
+    /* ======================= */
+    /* history */
+    #history {
+        background-position: right;
+    }
+}
+
 @media screen and (max-width: 425px) {
     /* ======================= */
     /* ======================= */
@@ -384,6 +394,16 @@ footer {
     .mountains_schedule {
         margin: 30px auto;
     }
+
+
+    /* ======================= */
+    /* ======================= */
+    /* ======================= */
+    /* subHeader */
+    .subHeader_image img {
+		width: 125px;
+	}
+
 
     /* ======================= */
     /* ======================= */
